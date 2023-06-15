@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>웹 페이지 제목</title>
+  <style>
+    /* 스타일을 추가해주세요 */
+    .categories {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 0;
+    }
+    .categories li button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .sorting-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .sorting-buttons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: black;
+    }
+    .article-images {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+    .article-images img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <ul class="categories">
+      <li><button>전체</button></li>
+      <li><button>칼럼</button></li>
+      <li><button>인터뷰</button></li>
+      <li><button>뷰티</button></li>
+      <li><button>라이프</button></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div class="image-row">
+      <img src="image1.png" alt="이미지 1"></a>
+      <img src="image2.png" alt="이미지 2"></a>
+      <img src="image3.png" alt="이미지 3"></a>
+    </div>
+    <div class="sorting-buttons">
+      <button>인기순</button>
+      <button>최신순</button>
+    </div>
+    <div class="article-images">
+      <a href="https://camscon.kr/magazine/29168"><img src="article1.png" alt="기사 이미지 1"></a>
+      <a href="https://camscon.kr/magazine/29169"><img src="article2.png" alt="기사 이미지 2"></a>
+      <a href="https://camscon.kr/magazine/29220"><img src="article3.png" alt="기사 이미지 3"></a>
+      
+      <!-- 필요한 만큼의 기사 이미지와 링크를 추가하세요 -->
+    </div>
+  </div>
+
+  <script>
+    // JavaScript 코드는 동일하게 유지합니다.
+    function showHiddenImages() {
+      var hiddenImages = document.querySelectorAll('.article-images img:not(:nth-child(-n+5))');
+      hiddenImages.forEach(function(image) {
+        image.style.display = 'inline-block';
+      });
+    }
+  </script>
+</body>
+</html>
